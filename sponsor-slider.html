@@ -1,0 +1,373 @@
+<style>
+    .sponsor-embed-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .slider-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+        max-width: 1060px;
+    }
+
+    .slider {
+        background: white;
+        box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+        height: 120px;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        max-width: 960px;
+        min-width: 0;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
+    .slider:focus-visible {
+        outline: 3px solid #005fcc;
+        outline-offset: 2px;
+    }
+    .slider .slide-track {
+        display: flex;
+        will-change: transform;
+    }
+    .slider .slide {
+        height: 100px;
+        width: 250px;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .slider .slide img {
+        max-height: 100%;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+    }
+
+    .slide-label {
+        height: 100px;
+        width: 250px;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Californian FB", Georgia, serif;
+        font-size: 34px;
+        line-height: 1;
+        color: #fff;
+        background: #1b4864;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+    }
+
+    .slide-label-plain {
+        height: 100px;
+        width: 250px;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Inter", Arial, sans-serif;
+        font-size: 34px;
+        line-height: 1;
+        color: #000;
+        text-align: center;
+        text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    .arrow-btn {
+        width: 36px;
+        height: 36px;
+        border: none;
+        border-radius: 50%;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        line-height: 1;
+        color: #333;
+        cursor: pointer;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+        flex-shrink: 0;
+    }
+    .arrow-btn:hover {
+        background: #f2f2f2;
+    }
+    .arrow-btn:focus-visible {
+        outline: 3px solid #005fcc;
+        outline-offset: 2px;
+    }
+
+    .play-pause-btn {
+        width: 44px;
+        height: 44px;
+        border: none;
+        border-radius: 50%;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        color: #333;
+        cursor: pointer;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+        flex-shrink: 0;
+    }
+    .play-pause-btn:hover {
+        background: #f2f2f2;
+    }
+    .play-pause-btn:focus-visible {
+        outline: 3px solid #005fcc;
+        outline-offset: 2px;
+    }
+
+    @media (max-width: 800px) {
+        .slider {
+            height: 90px;
+        }
+        .slider .slide,
+        .slide-label,
+        .slide-label-plain {
+            height: 70px;
+            width: 160px;
+            padding: 6px;
+        }
+        .slide-label,
+        .slide-label-plain {
+            font-size: 20px;
+        }
+        .arrow-btn {
+            display: none;
+        }
+        .play-pause-btn {
+            width: 36px;
+            height: 36px;
+            font-size: 15px;
+        }
+    }
+</style>
+
+<div class="sponsor-embed-container">
+    <div class="slider-wrapper">
+        <button type="button" class="play-pause-btn" aria-label="Pause slider">
+            ⏸
+        </button>
+        <button
+            type="button"
+            class="arrow-btn arrow-prev"
+            aria-label="Previous slide"
+        >
+            ‹
+        </button>
+
+        <div
+            class="slider"
+            tabindex="0"
+            role="link"
+            aria-label="Sponsor logos. Activate to view the sponsors page."
+        >
+            <div class="slide-track">
+                <div class="slide-label">B2B</div>
+                <div class="slide">
+                    <img
+                        src="https://images.squarespace-cdn.com/content/v1/6660a51220c4d544be347123/a7518b94-771c-4719-95eb-7f6d362526c3/terrabyteai2.png?format=1000w"
+                        alt="Logo: Globe with squares in it as a stylize Earth with the text Terrabyte.ai"
+                    />
+                </div>
+                <div class="slide-label">Silver</div>
+                <div class="slide">
+                    <img
+                        src="https://images.squarespace-cdn.com/content/v1/6660a51220c4d544be347123/7339b1f2-55f0-4654-bd3f-57764c91af06/FujitsuLogoRedTransparent.png"
+                        alt="Logo: Fujitsu written in red font with a swirl for the dots over the j and i"
+                    />
+                </div>
+                <div class="slide">
+                    <img
+                        src="https://images.squarespace-cdn.com/content/v1/6660a51220c4d544be347123/f2ab4c13-228e-463b-a84f-6a85b0274cf6/Development+Seed.png"
+                        alt="Logo: White plant silhouette on an orange square background with the text development in black and seed in orange"
+                    />
+                </div>
+                <div class="slide">
+                    <img
+                        src="https://images.squarespace-cdn.com/content/v1/6660a51220c4d544be347123/8ca142b4-3d56-43c3-acc2-f335d1d344fd/Cesium.png"
+                        alt="Logo: A circle with a white zig zag line of mountains that are green and a blue sky with a white dot as the moon or sun in the sky and the work cesium in lower case black letters and additional text of Part of Bentley Systems below cesium."
+                    />
+                </div>
+                <div class="slide">
+                    <img
+                        src="https://images.squarespace-cdn.com/content/v1/6660a51220c4d544be347123/e39a2ca1-00be-4294-b3b8-1aabbdd87ab8/carahsoft.png"
+                        alt="Logo: The word Carahsoft in lower case blue letters."
+                    />
+                </div>
+                <div class="slide">
+                    <img
+                        src="https://images.squarespace-cdn.com/content/v1/6660a51220c4d544be347123/68cc0f1f-4704-4b2d-bb1b-f7f8d804f2ba/esri18globelogotagright1C.png"
+                        alt="Logo: A stylized globe with black latitude and longitude lines focused over a highly simplified North and South America, Europe, and Africa with ESRI in lower case to the right of the globe, and 'The Science of Where' to the right of that."
+                    />
+                </div>
+                <div class="slide-label">Bronze</div>
+                <div class="slide">
+                    <img
+                        src="https://images.squarespace-cdn.com/content/v1/6660a51220c4d544be347123/8d683ae5-4d90-496b-921a-37a25b760216/Hobu+transparent.png"
+                        alt="Logo: Stylized H in blue and white with the text hobu in black"
+                    />
+                </div>
+                <div class="slide">
+                    <img
+                        src="https://images.squarespace-cdn.com/content/v1/6660a51220c4d544be347123/af4bc233-bb91-4373-9d16-87679b078821/GeoSolutions_600dpi_transparent.png"
+                        alt="Logo: A globe focused on Europe and Africa with green arrows circling around it with the text Geo in blue wrapping over the top and solutions in green wrapping around the bottom of the globe"
+                    />
+                </div>
+                <div class="slide">
+                    <img
+                        src="https://images.squarespace-cdn.com/content/v1/6660a51220c4d544be347123/d53acb02-2166-4d4c-9682-1210de95df65/lgndlogoblack.png"
+                        alt="Logo: The letters LGND in black with a square between the L and G and G and N"
+                    />
+                </div>
+                <div class="slide-label">Supporter</div>
+                <div class="slide-label-plain">Dewberry</div>
+                <div class="slide-label-plain">Element84</div>
+                <div class="slide-label-plain">GeoRobotix</div>
+                <div class="slide-label-plain">BayGeo</div>
+                <div class="slide-label-plain">Voyager Search</div>
+                <div class="slide-label-plain">TerraFrame</div>
+                <div class="slide-label-plain">Wet Dog Weather</div>
+                <div class="slide-label-plain">Overture Maps Foundation</div>
+                <div class="slide-label-plain">Bright Rain Solutions</div>
+            </div>
+        </div>
+            <button
+                type="button"
+                class="arrow-btn arrow-next"
+                aria-label="Next slide"
+            >
+                ›
+            </button>
+        </div>
+    </div>
+
+    <!--Slide Template-->
+    <!--
+    <div class="slide">
+        <img
+            src="ADD_URL_HERE"
+            alt=""
+        />
+    </div>
+-->
+
+    <script>
+        const slider = document.querySelector(".slider");
+        const track = document.querySelector(".slide-track");
+        const originalSlides = Array.from(track.children);
+
+        const widths = originalSlides.map((el) => el.offsetWidth);
+        const totalWidth = widths.reduce((a, b) => a + b, 0);
+        const stops = [];
+        let acc = 0;
+        widths.forEach((w) => {
+            stops.push(acc);
+            acc += w;
+        });
+
+        originalSlides.forEach((slide) =>
+            track.appendChild(slide.cloneNode(true)),
+        );
+        track.style.width = totalWidth * 2 + "px";
+
+        const cycleSeconds = 100;
+        const speed = totalWidth / cycleSeconds;
+
+        const prefersReducedMotion = window.matchMedia(
+            "(prefers-reduced-motion: reduce)",
+        ).matches;
+        let isPlaying = !prefersReducedMotion;
+        let position = 0;
+        let lastTime = null;
+
+        const playPauseBtn = document.querySelector(".play-pause-btn");
+        const prevBtn = document.querySelector(".arrow-prev");
+        const nextBtn = document.querySelector(".arrow-next");
+
+        function setPosition(px) {
+            position = ((px % totalWidth) + totalWidth) % totalWidth;
+            track.style.transform = `translateX(-${position}px)`;
+        }
+
+        function setPlaying(playing) {
+            isPlaying = playing;
+            playPauseBtn.textContent = isPlaying ? "⏸" : "▶";
+            playPauseBtn.setAttribute(
+                "aria-label",
+                isPlaying ? "Pause slider" : "Play slider",
+            );
+        }
+        setPlaying(isPlaying);
+
+        function animate(time) {
+            if (lastTime === null) lastTime = time;
+            const delta = (time - lastTime) / 1000;
+            lastTime = time;
+            if (isPlaying) {
+                setPosition(position + speed * delta);
+            }
+            requestAnimationFrame(animate);
+        }
+        requestAnimationFrame(animate);
+
+        function nextStop(pos) {
+            for (const s of stops) {
+                if (s > pos + 0.5) return s;
+            }
+            return stops[0] + totalWidth;
+        }
+        function prevStop(pos) {
+            for (let i = stops.length - 1; i >= 0; i--) {
+                if (stops[i] < pos - 0.5) return stops[i];
+            }
+            return stops[stops.length - 1] - totalWidth;
+        }
+
+        playPauseBtn.addEventListener("click", () => setPlaying(!isPlaying));
+        prevBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            setPosition(prevStop(position));
+        });
+        nextBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            setPosition(nextStop(position));
+        });
+
+        function goToSponsors() {
+            window.open(
+                "https://www.foss4gna.org/2026-sponsors",
+                "_blank",
+                "noopener",
+            );
+        }
+        slider.addEventListener("click", goToSponsors);
+        slider.addEventListener("keydown", (e) => {
+            if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                goToSponsors();
+            }
+        });
+    </script>
+</div>

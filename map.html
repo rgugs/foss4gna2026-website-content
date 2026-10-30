@@ -1,0 +1,57 @@
+<div id="map" style="width: 100%; height: 700px"></div>
+
+<link
+    rel="stylesheet"
+    href="https://unpkg.com/maplibre-gl@5.21.1/dist/maplibre-gl.css"
+/>
+<script src="https://unpkg.com/maplibre-gl@5.21.1/dist/maplibre-gl.js"></script>
+
+<script>
+    const map = new maplibregl.Map({
+        container: "map",
+        style: "https://api.protomaps.com/styles/v5/light/en.json?key=c71dff02c12fc01a",
+        center: [-121.489244, 38.578992],
+        zoom: 13,
+    });
+
+    map.addControl(new maplibregl.NavigationControl(), "top-right");
+    map.setMaxPitch(0);
+
+    const marker = new maplibregl.Marker()
+        .setLngLat([-121.489544, 38.578992])
+        .addTo(map);
+
+    if (window.matchMedia("(pointer: coarse)").matches) {
+        map.dragPan.disable();
+
+        map.getContainer().addEventListener(
+            "touchstart",
+            (e) => {
+                if (e.touches.length >= 2) map.dragPan.enable();
+                else map.dragPan.disable();
+            },
+            { passive: true },
+        );
+
+        map.getContainer().addEventListener(
+            "touchend",
+            (e) => {
+                if (e.touches.length < 2) map.dragPan.disable();
+            },
+            { passive: true },
+        );
+    }
+
+    map.getContainer().addEventListener(
+        "wheel",
+        (e) => {
+            if (e.ctrlKey) {
+                e.preventDefault();
+                map.scrollZoom.enable();
+            } else {
+                map.scrollZoom.disable();
+            }
+        },
+        { passive: false, capture: true },
+    );
+</script>

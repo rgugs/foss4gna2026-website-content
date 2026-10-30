@@ -1,0 +1,103 @@
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+    .cd-wrap {
+        font-family: "Inter", sans-serif;
+        text-align: center;
+    }
+    .cd-grid {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+    .cd-unit {
+        background: #f5f5f0;
+        border: 1px solid #c8dac8;
+        border-radius: 12px;
+        padding: 1.25rem 1rem 1rem;
+        min-width: 80px;
+        flex: 1;
+        max-width: 110px;
+    }
+    .cd-num {
+        font-size: 40px;
+        font-weight: 600;
+        color: #1e3a1e;
+        line-height: 1;
+        display: block;
+        font-variant-numeric: tabular-nums;
+    }
+    .cd-unit-label {
+        font-size: 11px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #7a9a7a;
+        font-weight: 500;
+        margin-top: 6px;
+        display: block;
+    }
+    .cd-dot {
+        font-size: 32px;
+        font-weight: 300;
+        color: #c8dac8;
+        align-self: center;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+        padding-top: 4px;
+    }
+</style>
+
+<div class="cd-wrap">
+    <div class="cd-grid">
+        <div class="cd-unit">
+            <span class="cd-num" id="cd-days">—</span
+            ><span class="cd-unit-label">Days</span>
+        </div>
+        <div class="cd-dot">:</div>
+        <div class="cd-unit">
+            <span class="cd-num" id="cd-hours">—</span
+            ><span class="cd-unit-label">Hours</span>
+        </div>
+        <div class="cd-dot">:</div>
+        <div class="cd-unit">
+            <span class="cd-num" id="cd-mins">—</span
+            ><span class="cd-unit-label">Minutes</span>
+        </div>
+        <div class="cd-dot">:</div>
+        <div class="cd-unit">
+            <span class="cd-num" id="cd-secs">—</span
+            ><span class="cd-unit-label">Seconds</span>
+        </div>
+    </div>
+</div>
+
+<script>
+    const target = new Date("2026-07-01T00:00:00-10:00");
+    function pad(n) {
+        return String(Math.max(0, n)).padStart(2, "0");
+    }
+    function tick() {
+        const diff = target - Date.now();
+        if (diff <= 0) {
+            ["cd-days", "cd-hours", "cd-mins", "cd-secs"].forEach(
+                (id) => (document.getElementById(id).textContent = "00"),
+            );
+            return;
+        }
+        document.getElementById("cd-days").textContent = pad(
+            Math.floor(diff / 86400000),
+        );
+        document.getElementById("cd-hours").textContent = pad(
+            Math.floor((diff % 86400000) / 3600000),
+        );
+        document.getElementById("cd-mins").textContent = pad(
+            Math.floor((diff % 3600000) / 60000),
+        );
+        document.getElementById("cd-secs").textContent = pad(
+            Math.floor((diff % 60000) / 1000),
+        );
+    }
+    tick();
+    setInterval(tick, 1000);
+</script>

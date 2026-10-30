@@ -1,0 +1,19 @@
+.header-nav {
+    width: 90% !important;
+    flex: 1 1 90% !important;
+}
+
+/*// Header Nav Width Adjustment*/
+.header-layout-branding-center-nav-center .header-title-nav-wrapper {
+    flex: 2 0 100% !important;
+}
+
+.header-layout-branding-center-nav-center .header-actions--right {
+    position: relative;
+    right: 4vw;
+}
+
+.header-actions.header-actions--right {
+    display: none;
+    width: 0;
+}

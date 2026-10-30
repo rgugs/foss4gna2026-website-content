@@ -1,0 +1,105 @@
+/* Hover colors */
+header a:hover,
+header a:hover *,
+.header-nav-folder-title:hover,
+.header-nav-folder-title:hover *,
+.header-nav-folder-content a:hover,
+.header-nav-folder-content a:hover * {
+    color: #1b4864 !important;
+    background-color: #f4a02a;
+    border-radius: 6px;
+}
+
+.header-nav-folder-title:hover svg,
+.header-nav-folder-title:hover svg path {
+    fill: #1b4864 !important;
+    stroke: #1b4864 !important;
+}
+
+/* Prevent wrapping */
+.header-nav {
+    flex-wrap: nowrap !important;
+    min-width: 0;
+}
+
+.header-nav-list {
+    flex-wrap: nowrap !important;
+    white-space: nowrap;
+}
+
+.header-nav-item {
+    white-space: nowrap;
+}
+
+.header-title {
+    flex: 0 0 auto !important;
+    width: auto !important;
+}
+
+/* Layout: logo | nav | button (desktop only) */
+@media screen and (min-width: 901px) {
+    .header-display-desktop {
+        display: grid !important;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        position: relative; /* lets nav position independently of grid columns */
+    }
+
+    .header-title-nav-wrapper {
+        display: contents;
+    }
+
+    .header-nav {
+        position: absolute; /* was: justify-self: center */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .header-actions--right {
+        justify-self: end;
+        grid-column: 3;
+    }
+}
+
+.header-layout-nav-center .header-nav {
+    width: auto !important; /* overrides Squarespace's fixed 34% cap */
+    flex: 0 1 auto !important; /* lets it shrink/grow to fit content */
+}
+
+.sqs-button-element--secondary {
+    background-color: #f49f29 !important;
+    color: #244964 !important;
+}
+
+/* Remove excess space — specific code blocks only */
+
+#block-yui_3_17_2_1_1780445832296_4128 .sqs-block-content,
+#block-yui_3_17_2_1_1780445832296_4128 .sqs-code-container,
+#block-yui_3_17_2_1_1780434442087_8369 .sqs-block-content,
+#block-yui_3_17_2_1_1780434442087_8369 .sqs-code-container,
+#block-yui_3_17_2_1_1788249758274_4108 .sqs-block-content,
+#block-yui_3_17_2_1_1788249758274_4108 .sqs-code-container,
+#block-yui_3_17_2_1_1790657730493_3452 .sqs-block-content, 
+#block-yui_3_17_2_1_1790657730493_3452 .sqs-code-container {
+    line-height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+#block-yui_3_17_2_1_1780445832296_4128 .cd-wrap,
+#block-yui_3_17_2_1_1780434442087_8369 .cd-wrap,
+#block-yui_3_17_2_1_1788249758274_4108 .cd-wrap,
+#block-yui_3_17_2_1_1790657730493_3452 .cd-wrap {
+    padding: 0;
+}
+
+[data-section-id="6a9686ab46741812cbc442c4"] .sqs-block-content,
+[data-section-id="6a9686ab46741812cbc442c4"] .sqs-code-container {
+    line-height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+[data-section-id="6a9686ab46741812cbc442c4"] .cd-wrap {
+    padding: 0;
+}

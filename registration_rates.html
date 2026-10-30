@@ -1,0 +1,91 @@
+<style>
+    .table_component {
+        overflow: auto;
+        width: 100%;
+    }
+
+    .table_component table tr td.rate_type {
+    }
+
+    .table_component table {
+        border: 1px solid #dededf;
+        height: 100%;
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+        border-spacing: 1px;
+        text-align: center;
+    }
+
+    .table_component caption {
+        caption-side: top;
+        text-align: left;
+    }
+
+    .table_component th {
+        border: 1px solid #dededf;
+        background-color: #eceff1;
+        color: #000000;
+        padding: 5px;
+    }
+
+    .table_component td {
+        border: 1px solid #dededf;
+        background-color: #ffffff;
+        color: #000000;
+        padding: 5px;
+    }
+</style>
+<div class="table_component" role="region" tabindex="0">
+    <table>
+        <caption style="position: absolute; left: -999px">
+            Registration Rates
+        </caption>
+        <thead>
+            <tr>
+                <th>Rate Type</th>
+                <th>Early Bird (By 9/17)</th>
+                <th>Regular Rate (9/18-11/1)</th>
+                <th>Onsite (11/2-11/4)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="rate_type">
+                    Full Conference<br /><strong>General</strong>
+                </td>
+                <td>$560</td>
+                <td>$640</td>
+                <td>$740</td>
+            </tr>
+            <tr>
+                <td class="rate_type">
+                    Full Conference<br /><strong>Student</strong>
+                </td>
+                <td colspan="3">$320</td>
+            </tr>
+            <tr>
+                <td class="rate_type">
+                    Full Conference<br /><strong>Government Employee</strong
+                    ><br />(Local, State, Tribal, Federal, Public
+                    Colleges/Universities)
+                </td>
+                <td colspan="3">$540</td>
+            </tr>
+            <tr>
+                <td class="rate_type">Single Day Registration</td>
+                <td>$275</td>
+                <td>$325</td>
+                <td>$375</td>
+            </tr>
+            <tr>
+                <td class="rate_type">Addon - Workshops</td>
+                <td colspan="3">$100</td>
+            </tr>
+            <tr>
+                <td class="rate_type">Addon - B2B Tickets</td>
+                <td colspan="3">$80</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

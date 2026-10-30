@@ -1,0 +1,90 @@
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+    .cfp-highlight {
+        font-family: "Inter", sans-serif;
+        text-align: center;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    .cfp-stats {
+        display: flex;
+        justify-content: center;
+        gap: 14px;
+        flex-wrap: wrap;
+        margin-bottom: 1.5rem;
+    }
+    .cfp-stat {
+        background: rgba(245, 245, 240, 0.6);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(200, 218, 200, 0.6);
+        border-radius: 16px;
+        padding: 1.4rem 1.25rem 1.1rem;
+        min-width: 140px;
+        flex: 1;
+        max-width: 200px;
+        box-shadow: 0 8px 24px rgba(30, 58, 30, 0.08);
+    }
+    .cfp-num {
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1;
+        display: block;
+        background: linear-gradient(180deg, #2d5a2d, #1e3a1e);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+    .cfp-label {
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #7a9a7a;
+        font-weight: 600;
+        margin-top: 8px;
+        display: block;
+    }
+    .cfp-deadline {
+        background: #1e3a1e;
+        color: #f5f5f0;
+        border-radius: 999px;
+        display: inline-block;
+        padding: 10px 24px;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+    }
+    .cfp-deadline span {
+        color: #c8dac8;
+        font-weight: 500;
+    }
+</style>
+
+<div class="cfp-highlight">
+    <div class="cfp-stats">
+        <div class="cfp-stat">
+            <span class="cfp-num">12</span>
+            <span class="cfp-label">Workshops</span>
+        </div>
+        <div class="cfp-stat">
+            <span class="cfp-num">100+</span>
+            <span class="cfp-label">Talks</span>
+        </div>
+        <div class="cfp-stat">
+            <span class="cfp-num">3</span>
+            <span class="cfp-label">Plenary Sessions</span>
+        </div>
+        <div class="cfp-stat">
+            <span class="cfp-num">5+</span>
+            <span class="cfp-label">Organized Events</span>
+        </div>
+    </div>
+    <a
+        href="https://www.foss4gna.org/cfp-2026"
+        class="cfp-deadline"
+        style="text-decoration: none; display: inline-block"
+    >
+        Call for Posters and Lightning Talks closes
+        <span>September 15, 2026</span>
+    </a>
+</div>

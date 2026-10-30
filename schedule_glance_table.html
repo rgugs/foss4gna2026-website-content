@@ -1,0 +1,228 @@
+<style>
+    .schedule-table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        background-color: #ffffff;
+        padding: 8px;
+    }
+    .schedule-table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0 10px;
+    }
+    .schedule-table caption {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+    }
+    .schedule-table thead th {
+        background-color: #214963;
+        color: #ffffff;
+        border: none;
+        padding: 14px 16px;
+        font-family: "CalifornianFB", serif;
+        font-size: 1em;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        text-align: left;
+    }
+    .schedule-table thead th:first-child {
+        border-radius: 8px 0 0 8px;
+    }
+    .schedule-table thead th:last-child {
+        border-radius: 0 8px 8px 0;
+    }
+    .schedule-table tbody th,
+    .schedule-table tbody td {
+        border: none;
+        padding: 10px 14px;
+        vertical-align: top;
+    }
+    .schedule-table tbody th {
+        background-color: #ffffff;
+        border-radius: 10px 0 0 10px;
+    }
+    .schedule-table tbody td {
+        background-color: transparent;
+    }
+    .schedule-table tbody td:last-child {
+        border-radius: 0 10px 10px 0;
+    }
+    .schedule-table .day-name {
+        font-family: "CalifornianFB", serif;
+        font-weight: bold;
+        font-size: 1.1em;
+        display: block;
+        color: #000000;
+    }
+    .schedule-table .day-date {
+        font-family: "Inter", sans-serif;
+        font-weight: normal;
+        font-size: 0.9em;
+        color: #6f7b68;
+        display: block;
+    }
+    .schedule-table ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    .schedule-table li,
+    .schedule-table .session-chip {
+        font-family: "Inter", sans-serif;
+        padding: 10px 14px;
+        border-radius: 8px;
+        line-height: 1.3;
+    }
+
+    /* Time-of-day color coding */
+    .schedule-table td.col-morning .session-chip,
+    .schedule-table td.col-morning li {
+        background-color: rgba(111, 123, 104, 0.35);
+    }
+    .schedule-table td.col-afternoon .session-chip,
+    .schedule-table td.col-afternoon li {
+        background-color: rgba(244, 159, 41, 0.35);
+    }
+    .schedule-table td.col-evening .session-chip,
+    .schedule-table td.col-evening li {
+        background-color: rgba(33, 73, 99, 0.35);
+    }
+    .schedule-note {
+        font-family: "Inter", sans-serif;
+        font-size: 0.9em;
+        margin-top: 10px;
+        color: #000000;
+    }
+    .schedule-table sup a {
+        color: #000000;
+        text-decoration: none;
+        font-weight: bold;
+    }
+</style>
+
+<div class="schedule-table-wrapper">
+    <table class="schedule-table">
+        <caption>
+            FOSS4G North America 2026 Schedule at a Glance
+        </caption>
+        <thead>
+            <tr>
+                <th scope="col">Day</th>
+                <th scope="col">Morning</th>
+                <th scope="col">Afternoon</th>
+                <th scope="col">Evening</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">
+                    <span class="day-name">Monday</span>
+                    <span class="day-date">November 2nd</span>
+                </th>
+                <td class="col-morning">
+                    <ul>
+                        <li>
+                            Workshops
+                            <sup>
+                                <a
+                                    href="#reg-note"
+                                    aria-label="requires separate registration, see note below table"
+                                    >*</a
+                                >
+                            </sup>
+                        </li>
+                    </ul>
+                </td>
+                <td class="col-afternoon">
+                    <ul>
+                        <li>
+                            Workshops
+                            <sup>
+                                <a
+                                    href="#reg-note"
+                                    aria-label="requires separate registration, see note below table"
+                                    >*</a
+                                >
+                            </sup>
+                        </li>
+                    </ul>
+                </td>
+                <td class="col-evening">
+                    <ul>
+                        <li>
+                            B2B Session
+                            <sup>
+                                <a
+                                    href="#reg-note"
+                                    aria-label="requires separate registration, see note below table"
+                                    >*</a
+                                >
+                            </sup>
+                            (Prior to Welcome Icebreaker)
+                        </li>
+                        <li>Welcome Icebreaker</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">
+                    <span class="day-name">Tuesday</span>
+                    <span class="day-date">November 3rd</span>
+                </th>
+                <td class="col-morning">
+                    <ul>
+                        <li>Plenary</li>
+                        <li>Concurrent Sessions</li>
+                    </ul>
+                </td>
+                <td class="col-afternoon">
+                    <ul>
+                        <li>Posters (Lunch period)</li>
+                        <li>Concurrent Sessions</li>
+                        <li>Lightning Talks</li>
+                    </ul>
+                </td>
+                <td class="col-evening">
+                    <ul>
+                        <li>Night In/Night Out</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">
+                    <span class="day-name">Wednesday</span>
+                    <span class="day-date">November 4th</span>
+                </th>
+                <td class="col-morning">
+                    <ul>
+                        <li>Plenary</li>
+                        <li>Birds of a Feather</li>
+                        <li>Concurrent Sessions</li>
+                    </ul>
+                </td>
+                <td class="col-afternoon">
+                    <ul>
+                        <li>Concurrent Sessions</li>
+                        <li>Plenary</li>
+                    </ul>
+                </td>
+                <td class="col-evening"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<p id="reg-note" class="schedule-note">
+    * These events require separate registration and may have fees. You do not
+    need to attend the full conference to register for these events.
+</p>
